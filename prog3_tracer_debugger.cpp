@@ -1,14 +1,8 @@
 #include <iostream>
 #include <random>
+#include "Echange.h"
 
 using namespace std;
-
-void maFunc(int* a, int b) 
-{
-	int temp = *a;
-	*a = *b;
-	*b = temp;
-}
 
 int main()
 {
@@ -19,7 +13,7 @@ int main()
 
 	int tab[10]{};
 
-	for (int i = 0; i < 100; i++)
+	for (int i = 0; i < 10; i++)
 	{
 		tab[i] = rng(rd);
 		cout << tab[i] << " ";
@@ -35,7 +29,7 @@ int main()
 			if (tab[j] < tab[idx]) idx = j;
 		}
 
-		maFunc(&tab[i], tab[idx]);
+		echange(&tab[i], &tab[idx]);
 	}
 
 	for (int i = 0; i < 10; i++)
