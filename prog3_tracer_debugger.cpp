@@ -1,13 +1,14 @@
 #include <iostream>
 #include <random>
+#include "prog3_tracer_debugger.h"
 
 using namespace std;
 
 void maFunc(int* a, int b) 
 {
 	int temp = *a;
-	*a = *b;
-	*b = temp;
+	*a = b;
+	b = temp;
 }
 
 int main()
@@ -19,7 +20,7 @@ int main()
 
 	int tab[10]{};
 
-	for (int i = 0; i < 100; i++)
+	for (int i = 0; i < 10; i++)
 	{
 		tab[i] = rng(rd);
 		cout << tab[i] << " ";
