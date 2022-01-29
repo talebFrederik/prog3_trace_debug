@@ -16,7 +16,7 @@ int main()
 	std::random_device rd;
 	std::mt19937 rn(rd());
 	// dist1 sert à normaliser le nombre généré entre 1 et 100
-	std::uniform_int_distribution<> rng(1, 99);
+	std::uniform_int_distribution<> rng(1, 100);
 
 	int tab[10]{};
 

@@ -1,3 +1,3 @@
 #pragma once
 
-void maFunc(int*, int*);
+void maFunc(int*, int);
